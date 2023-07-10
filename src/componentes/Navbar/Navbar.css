@@ -1,0 +1,10 @@
+.nav-item {
+  display: flex;
+  align-items: center;
+  margin-right: 25px;
+}
+
+.container-fluid {
+  display: flex;
+  flex-direction: column;
+}
