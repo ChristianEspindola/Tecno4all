@@ -26,18 +26,25 @@ export const ItemPorID = (id) => {
 ////
 const ItemListContainer = () => {
   const [productos, setProductos] = useState([]);
+  const [titulo, setTitulo] = useState("productos");
+
   const marca = useParams().marca;
-  console.log(marca);
 
   useEffect(() => {
     InfoDatos().then((res) => {
-      setProductos(res);
+      if (marca) {
+        setProductos(res.filter((prod) => prod.marca === marca));
+        setTitulo(marca);
+      } else {
+        setProductos(res);
+        setTitulo("productos");
+      }
     });
-  }, []);
+  }, [marca]);
 
   return (
     <div>
-      <ItemList productos={productos} />
+      <ItemList productos={productos} titulo={titulo} />
     </div>
   );
 };
