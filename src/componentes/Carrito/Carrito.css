@@ -1,0 +1,15 @@
+.ProductoCarrito {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.ImagenCarrito {
+  max-width: 100px;
+  margin-right: 20px;
+  margin-left: 10%;
+}
+
+.InfoProducto {
+  flex: 1;
+}

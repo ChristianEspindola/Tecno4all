@@ -3,7 +3,6 @@ function Layout({ children }) {
     <div>
       <header>{children}</header>
       <main></main>
-      <footer> </footer>
     </div>
   );
 }

@@ -1,8 +1,26 @@
+import { useContext, useState } from "react";
+import ItemCount from "../ItemCount";
+import { CarritoContext } from "../../context/CarritoContext";
+import Item from "../Item";
+
 const ItemDetail = ({ item }) => {
+  const { carrito, Agregar } = useContext(CarritoContext);
+  console.log(carrito);
+
+  const [cantidad, setCantidad] = useState(1);
+
+  const RestarCantidad = () => {
+    cantidad > 1 && setCantidad(cantidad - 1);
+  };
+
+  const SumarCantidad = () => {
+    cantidad < item.stock && setCantidad(cantidad + 1);
+  };
+
   return (
     <div className="Container">
       <div className="detalleProducto">
-        <img src={item.imagen} alt={item.nombre} />
+        <img className="imagen" src={item.imagen} alt={item.nombre} />
         <div>
           <h3 className="Titulo">{item.nombre}</h3>
           <p className="categoria">
@@ -10,6 +28,14 @@ const ItemDetail = ({ item }) => {
           </p>
           <p className="descripcion">{item.descripcion}</p>
           <p className="precio"> ${item.precio}</p>
+          <ItemCount
+            cantidad={cantidad}
+            RestarCantidad={RestarCantidad}
+            SumarCantidad={SumarCantidad}
+            Agregar={() => {
+              Agregar(item, cantidad);
+            }}
+          />
         </div>
       </div>
     </div>

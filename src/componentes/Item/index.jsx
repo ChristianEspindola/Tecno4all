@@ -6,7 +6,7 @@ const Item = ({ producto }) => {
     <section>
       <div className="producto">
         <br />
-        <img src={producto.imagen} />
+        <img className="imagen" src={producto.imagen} />
         <h4 className="nombre"> {producto.nombre} </h4>
         <h4 className="precio">Precio: {producto.precio} USDT </h4>
 

@@ -52,8 +52,10 @@ function Navbar() {
                 Nosotros
               </Link>
             </li>
+            <li>
+              <Cardwidget />
+            </li>
           </ul>
-          <Cardwidget />
         </div>
       </div>
     </nav>
