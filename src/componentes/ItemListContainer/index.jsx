@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import data from "../../data/data.json";
 import ItemList from "../ItemList";
 import { useParams } from "react-router-dom";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../firebase/config";
 
 export const InfoDatos = () => {
   return new Promise((resolve, reject) => {
@@ -31,14 +32,10 @@ const ItemListContainer = () => {
   const marca = useParams().marca;
 
   useEffect(() => {
-    InfoDatos().then((res) => {
-      if (marca) {
-        setProductos(res.filter((prod) => prod.marca === marca));
-        setTitulo(marca);
-      } else {
-        setProductos(res);
-        setTitulo("productos");
-      }
+    const productosfire = collection(db, "productos");
+
+    getDocs(productosfire).then((resp) => {
+      console.log(resp);
     });
   }, [marca]);
 

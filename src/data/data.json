@@ -5,7 +5,7 @@
     "marca": "apple",
     "descripcion": "El iPhone 11 es un smartphone impresionante con un diseño elegante, rendimiento excepcional y una cámara dual que permite capturar fotos y videos de alta calidad. Su pantalla Liquid Retina de 6.1 pulgadas, colores vibrantes y batería de larga duración lo convierten en una opción sobresaliente para entretenimiento, trabajo y comunicación. Además, cuenta con características avanzadas como reconocimiento facial Face ID, resistencia al agua y polvo, y soporte para carga inalámbrica, satisfaciendo las necesidades de los usuarios más exigentes y manteniéndose como un referente en el mundo de los smartphones.",
     "SistemaOperativo": "IOS",
-    "precio": 290.99,
+    "precio": 500,
     "imagen": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-11.jpg",
     "stock": 100
   },
@@ -15,7 +15,7 @@
     "marca": "apple",
     "descripcion": "El iPhone 12 combina un diseño elegante con un rendimiento excepcional. Su pantalla Super Retina XDR de 6.1 pulgadas ofrece colores vibrantes y alto brillo. El potente chip A14 Bionic asegura una experiencia fluida y rápida. Su cámara dual de 12 MP captura imágenes nítidas, incluso en poca luz. La compatibilidad con 5G brinda una conexión más rápida. Además, cuenta con Face ID, resistencia al agua y MagSafe para carga inalámbrica y accesorios magnéticos. Es uno de los mejores smartphones disponibles en el mercado.",
     "SistemaOperativo": "IOS",
-    "precio": 490.99,
+    "precio": 490,
     "imagen": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-12.jpg",
     "stock": 50
   },
@@ -25,7 +25,7 @@
     "marca": "apple",
     "descripcion": "El iPhone 13 es un smartphone destacado con diseño elegante y rendimiento excepcional. Su pantalla Super Retina XDR de 6.1 pulgadas ofrece colores vivos. Potenciado por el chip A15 Bionic, brinda un rendimiento rápido y eficiente. Cámara dual de 12 MP para fotos y videos de calidad, 5G para mayor velocidad, Face ID y resistencia al agua. Con carga inalámbrica y MagSafe. Sobresaliente y atractivo para usuarios exigentes.",
     "SistemaOperativo": "IOS",
-    "precio": 190.99,
+    "precio": 190,
     "imagen": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13.jpg",
     "stock": 10
   },
@@ -35,7 +35,7 @@
     "marca": "apple",
     "descripcion": "El iPhone 14 es un teléfono inteligente de Apple que se lanzó en septiembre de 2022. Viene en acabados de medianoche, blanco estrella, azul, púrpura y amarillo. Tiene una pantalla Super Retina XDR OLED de 6.1 pulgadas con una resolución de 2532 x 1170 píxeles. Está alimentado por el chip A15 Bionic y viene con opciones de almacenamiento de 128 GB, 256 GB y 512 GB. También cuenta con una cámara dual de 12 MP y es resistente al agua y al polvo con una calificación IP68",
     "SistemaOperativo": "IOS",
-    "precio": 290.99,
+    "precio": 290,
     "imagen": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-14.jpg",
     "stock": 100
   },
@@ -45,7 +45,7 @@
     "marca": "samsung",
     "descripcion": "El Samsung Galaxy S21 es un smartphone excepcional con un diseño elegante y potente rendimiento. Su pantalla Dynamic AMOLED de 6.2 pulgadas ofrece colores vibrantes. Equipado con el procesador Exynos 2100 o Snapdragon 888, brinda un rendimiento fluido y rápido. La cámara triple de 12 MP captura fotos y videos detallados. Con 5G, resistencia al agua, carga inalámbrica y reconocimiento facial, es una opción de alta gama para usuarios exigentes.",
     "SistemaOperativo": "ANDROID",
-    "precio": 490.99,
+    "precio": 490,
     "imagen": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s21-5g-r.jpg",
     "stock": 50
   },
@@ -53,9 +53,9 @@
     "id": 6,
     "nombre": "Samsung s22",
     "marca": "samsung",
-    "descripcion": "El Samsung Galaxy S22 es un teléfono inteligente de Samsung que se lanzó en 2023. Viene con una pantalla Dynamic AMOLED 2X de 6.1 pulgadas a resolución FHD+ y tasa de refresco variable de 120Hz1. Está disponible en varios colores, incluyendo Morado Bora, Blanco fantasma, Negro fantasma, Verde, Rosa dorado y otros colores exclusivos en Samsung.com",
+    "descripcion": "El Samsung Galaxy S22 es un teléfono inteligente de Samsung que se lanzó en 2023. Viene con una pantalla Dynamic AMOLED 2X de 6.1 pulgadas a resolución FHD+ y tasa de refresco variable de 120Hz1. Está disponible en varios colores, incluyendo Morado Bora, Blanco fantasma, Negro fantasma, Verde, Rosa dorado y otros colores.",
     "SistemaOperativo": "ANDROID",
-    "precio": 190.99,
+    "precio": 190,
     "imagen": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s22-5g.jpg",
     "stock": 10
   },
@@ -65,7 +65,7 @@
     "marca": "samsung",
     "descripcion": "El Samsung Galaxy S23 es un teléfono inteligente de Samsung que se lanzó en febrero de 2023. Viene con una pantalla Dynamic AMOLED 2X de 6.1 pulgadas a resolución FHD+ y tasa de refresco variable de 120Hz. Cuenta con un sistema de cámara triple versátil, un chip Snapdragon 8 Gen 2 y soporte para carga rápida",
     "SistemaOperativo": "ANDROID",
-    "precio": 290.99,
+    "precio": 290,
     "imagen": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s23-5g.jpg",
     "stock": 100
   },
@@ -75,7 +75,7 @@
     "marca": "xiaomi",
     "descripcion": "El Xiaomi 12 es un teléfono inteligente de Xiaomi que se lanzó en septiembre de 2022. Viene con una pantalla OLED de 6.28 pulgadas y tasa de refresco de 120Hz1. Está potenciado por el procesador más potente de Qualcomm a la fecha, el Snapdragon 8 Gen 1, acompañado de 8GB o 12GB de RAM y 128GB o 256GB de almacenamiento interno",
     "SistemaOperativo": "ANDROID",
-    "precio": 490.99,
+    "precio": 490,
     "imagen": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-12.jpg",
     "stock": 50
   },
@@ -85,7 +85,7 @@
     "marca": "xiaomi",
     "descripcion": "El Xiaomi 13 es un teléfono inteligente de Xiaomi que se lanzó en septiembre de 2022. Viene con una pantalla OLED de 6.36 pulgadas y tasa de refresco de 120Hz1. Está potenciado por el procesador más potente de Qualcomm a la fecha, el Snapdragon 8 Gen 2, acompañado de 8GB o 12GB de RAM y 128GB, 256GB o 512GB de almacenamiento interno",
     "SistemaOperativo": "ANDROID",
-    "precio": 190.99,
+    "precio": 190,
     "imagen": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-13-red.jpg",
     "stock": 10
   }
