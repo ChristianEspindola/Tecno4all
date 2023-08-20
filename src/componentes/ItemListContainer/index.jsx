@@ -35,7 +35,9 @@ const ItemListContainer = () => {
     const productosfire = collection(db, "productos");
 
     getDocs(productosfire).then((resp) => {
-      console.log(resp);
+      const datos = resp.docs.map((prod) => ({ id: prod.id, ...prod.data() }));
+      setProductos(datos);
+      console.log(datos, "esto");
     });
   }, [marca]);
 
