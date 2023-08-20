@@ -23,7 +23,7 @@ export const CarritoProvider = ({ children }) => {
   };
 
   const CantidadEnElcarrito = () => {
-    return carrito.reduce((acumulador, prod) => acumulador + prod.cantidad, 0);
+    carrito.reduce((acumulador, prod) => acumulador + prod.cantidad, 0);
   };
 
   const vaciarCarrito = () => {

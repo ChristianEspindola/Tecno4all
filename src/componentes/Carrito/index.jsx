@@ -15,8 +15,8 @@ const Carrito = () => {
       <h1>Carrito</h1>
       <hr />
 
-      {carrito.map((prod) => (
-        <div key={prod.id} className="ProductoCarrito">
+      {carrito.map((prod, index) => (
+        <div key={index} className="ProductoCarrito">
           <img className="ImagenCarrito" src={prod.imagen} alt={prod.nombre} />
 
           <div className="InfoProducto">
