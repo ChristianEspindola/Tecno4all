@@ -5,6 +5,8 @@ import ItemListContainer from "./componentes/ItemListContainer";
 import ItemDetailContainer from "./componentes/ItemDetailContainer";
 import Nosotros from "./componentes/Nosotros/index";
 import Carrito from "./componentes/Carrito";
+import CheckOut from "./componentes/CheckOut";
+
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { CarritoProvider } from "./context/CarritoContext";
 
@@ -17,6 +19,7 @@ import "./componentes/Footer/Footer.css";
 import "./componentes/ItemDetail/ItemDetail.css";
 import "./componentes/ItemCount/ItemCount.css";
 import "./componentes/Carrito/Carrito.css";
+import "./componentes/CheckOut/CheckOut.css";
 
 function App() {
   return (
@@ -32,6 +35,7 @@ function App() {
               <Route path="/productos/:marca" element={<ItemListContainer />} />
               <Route path="/nosotros" element={<Nosotros />} />
               <Route path="/carrito" element={<Carrito />} />
+              <Route path="/checkout" element={<CheckOut />} />
             </Routes>
             <Footer />
           </Layout>

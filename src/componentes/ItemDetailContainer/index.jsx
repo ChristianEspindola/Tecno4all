@@ -1,15 +1,18 @@
 import { useEffect, useState } from "react";
-import { ItemPorID } from "../ItemListContainer";
+
 import ItemDetail from "../ItemDetail";
 import { useParams } from "react-router-dom";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../../firebase/config";
 
 const ItemDetailContainer = () => {
   const [item, setItem] = useState(null);
   const id = useParams().id;
 
   useEffect(() => {
-    ItemPorID(Number(id)).then((res) => {
-      setItem(res);
+    const docDire = doc(db, "productos", id);
+    getDoc(docDire).then((resp) => {
+      setItem({ ...resp.data(), id: resp.id });
     });
   }, [id]);
 
