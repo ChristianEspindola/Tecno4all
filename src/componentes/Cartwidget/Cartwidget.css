@@ -1,0 +1,14 @@
+.numero {
+  font-size: 17px;
+  margin-top: 0.2rem;
+  font-family: Consolas;
+  color: #000000;
+
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.numero:hover {
+  background-color: #676767;
+}

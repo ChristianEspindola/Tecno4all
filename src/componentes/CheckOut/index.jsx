@@ -1,15 +1,22 @@
 import React, { useContext, useState } from "react";
-import { collection, addDoc, doc } from "firebase/firestore";
+import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../firebase/config";
 import { CarritoContext } from "../../context/CarritoContext";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function CheckOut() {
   const { carrito, vaciarCarrito, calcularPrecioTotal } =
     useContext(CarritoContext);
 
-  const { register, handleSubmit } = useForm();
+  const navigate = useNavigate();
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    getValues,
+  } = useForm();
 
   const Comprar = async (data) => {
     const pedidoCliente = {
@@ -29,6 +36,10 @@ function CheckOut() {
         title: `¡Gracias por tu compra, ${data.nombre}!`,
         text: `Tu pedido ha sido registrado exitosamente, id:${docRef.id} `,
       });
+      vaciarCarrito();
+      setTimeout(() => {
+        navigate("/productos");
+      }, 5000);
     } catch (error) {
       console.error("Error al agregar el pedido:", error);
       Swal.fire({
@@ -39,6 +50,11 @@ function CheckOut() {
     }
   };
 
+  const validateEmail = (value) => {
+    const email = getValues("email");
+    return value === email || "Los correos electrónicos no coinciden";
+  };
+
   return (
     <div className="containerForm">
       <h2>Finalizar Compra</h2>
@@ -46,18 +62,42 @@ function CheckOut() {
         <input
           type="text"
           placeholder="Ingresá tu nombre"
-          {...register("nombre")}
+          {...register("nombre", { required: true })}
         />
+        {errors.nombre && <p>El nombre es requerido</p>}
+
         <input
           type="email"
           placeholder="Ingresá tu e-mail"
-          {...register("email")}
+          {...register("email", { required: true })}
         />
+        {errors.email && <p>El correo es requerido</p>}
+
         <input
-          type="phone"
-          placeholder="Ingresá tu Celular"
-          {...register("telefono")}
+          type="email"
+          placeholder="Repetir e-mail"
+          {...register("emailRepeat", {
+            required: true,
+            validate: validateEmail,
+          })}
         />
+        {errors.emailRepeat && <p>{errors.emailRepeat.message}</p>}
+
+        <input
+          type="tel"
+          placeholder="Ingresá tu Celular"
+          {...register("telefono", {
+            pattern: /^\d+$/,
+            minLength: 8,
+          })}
+          inputMode="numeric"
+        />
+        {errors.telefono?.type === "pattern" ? (
+          <p>Ingrese solo números</p>
+        ) : errors.telefono?.type === "minLength" ? (
+          <p>Ingresar número de teléfono/celular completo</p>
+        ) : null}
+
         <button className="buttonCarrito">
           <Link className="nav-link" to="/carrito">
             <svg

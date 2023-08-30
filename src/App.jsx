@@ -20,6 +20,7 @@ import "./componentes/ItemDetail/ItemDetail.css";
 import "./componentes/ItemCount/ItemCount.css";
 import "./componentes/Carrito/Carrito.css";
 import "./componentes/CheckOut/CheckOut.css";
+import "./componentes/Cartwidget/Cartwidget.css";
 
 function App() {
   return (

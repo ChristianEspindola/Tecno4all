@@ -4,18 +4,9 @@ import { useParams } from "react-router-dom";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../../firebase/config";
 
-export const InfoDatos = () => {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve(data);
-    }, 500);
-  });
-};
-
-///ver el tema del loader
-
 const ItemListContainer = () => {
   const [productos, setProductos] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const [titulo, setTitulo] = useState("productos");
 
@@ -28,18 +19,33 @@ const ItemListContainer = () => {
       ? query(productosfire, where("marca", "==", marca))
       : productosfire;
 
-    getDocs(querryy).then((resp) => {
-      setProductos(
-        resp.docs.map((doc) => {
-          return { id: doc.id, ...doc.data() };
-        })
-      );
-    });
+    getDocs(querryy)
+      .then((resp) => {
+        setProductos(
+          resp.docs.map((doc) => {
+            return { id: doc.id, ...doc.data() };
+          })
+        );
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   }, [marca]);
 
   return (
     <div>
-      <ItemList productos={productos} titulo={titulo} />
+      {loading ? (
+        <div className="containerPelotitas">
+          <div className="cargando">
+            <div className="pelotas"></div>
+            <div className="pelotas"></div>
+            <div className="pelotas"></div>
+            <span className="texto-cargando">Cargando...</span>
+          </div>
+        </div>
+      ) : (
+        <ItemList productos={productos} titulo={titulo} />
+      )}
     </div>
   );
 };

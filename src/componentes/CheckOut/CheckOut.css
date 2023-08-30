@@ -50,7 +50,7 @@ h2 {
 .comprar:hover {
   background-color: #0056b3;
   transform: rotateZ(360deg);
-  transition: transform 1.5s ease;
+  transition: transform 0.5s ease;
 }
 
 .buttonCarrito:hover {

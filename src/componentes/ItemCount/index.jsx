@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-
 const ItemCount = ({ cantidad, RestarCantidad, SumarCantidad, Agregar }) => {
   return (
     <div className="container-item-count">
